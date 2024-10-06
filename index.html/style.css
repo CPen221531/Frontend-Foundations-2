@@ -8,8 +8,6 @@
 body {
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
-  padding: 0;
-  margin: 0;
   background-color: #f0f0f0;
 }
 
@@ -48,21 +46,23 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
 }
 
 form label {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 form input,
-form select,
-form button {
+form select {
   width: 100%;
   max-width: 400px;
   padding: 0.5rem;
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 button {
@@ -70,90 +70,96 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  align-self: flex-start;
 }
 
 button:hover {
   background-color: #555;
 }
 
+/* About section */
+main #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+main #about img {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+
+main #about p {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Ideas section */
+main #ideas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+main #ideas h3 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+main #ideas img {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+
+/* Host section */
+main #host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+main #host img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1rem;
+}
+
+main #host p,
+main #host ul {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
 /* Media query for desktop view */
 @media (min-width: 768px) {
-  header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-  }
-
-  nav ul {
-      display: flex;
-      gap: 2rem;
-  }
-
-  #menu-toggle {
-      display: none;
-  }
-
   form {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
+      padding: 2rem;
   }
 
   form label {
       width: 22%;
+      margin-bottom: 0;
   }
 
   form input,
-  form select,
-  button {
-      width: 22%;
+  form select {
+      width: 100%;
   }
 
   button {
       width: auto;
-      padding: 0.75rem 1.5rem;
-  }
-
-  /* About section */
-  main #about {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-  }
-
-  main #about img {
-      width: 30%;
-  }
-
-  main #about p {
-      width: 60%;
-  }
-
-  /* Ideas section - 2x2 grid */
-  main #ideas {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-  }
-
-  main #ideas img {
-      width: 100%;
-  }
-
-  /* Host section */
-  main #host {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
-
-  main #host img {
-      width: 40%;
-  }
-
-  main #host p {
-      width: 55%;
+      align-self: center;
   }
 }

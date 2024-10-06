@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacation Rentals & Unique Homes</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Lato&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -13,10 +11,7 @@
     <header>
         <div class="logo">Thinkfulbnb</div>
         <nav>
-            <button id="menu-toggle" aria-controls="menu" aria-expanded="false">
-                ☰
-            </button>
-            <ul id="menu">
+            <ul>
                 <li><a href="#stay">Stay</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#ideas">Ideas</a></li>
@@ -24,98 +19,28 @@
             </ul>
         </nav>
     </header>
+    
     <main>
-        <!-- Stay Section with Form -->
-        <section id="stay">
-            <h2>Find the perfect vacation rental</h2>
-            <form>
-                <label for="location">Location:</label>
-                <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    placeholder="Search destination"
-                    required
-                >
-
-                <label for="arrive">Arrive:</label>
-                <input type="date" id="arrive" name="arrive" required>
-
-                <label for="depart">Depart:</label>
-                <input type="date" id="depart" name="depart" required>
-
-                <label for="type">Type:</label>
-                <select id="type" name="type" required>
-                    <option value="" disabled selected>Select a type</option> <!-- Placeholder option -->
-                    <option value="apartment">Apartment</option>
-                    <option value="barn">Barn</option>
-                    <option value="castle">Castle</option>
-                    <option value="houseboat">Houseboat</option>
-                    <option value="tiny-house">Tiny House</option>
-                    <option value="yacht">Yacht</option>
-                    <option value="yurt">Yurt</option>
-                </select>
-
-                <button type="submit">Search</button>
-            </form>
-        </section>
-
         <!-- About Section -->
-        <section id="about" class="alternate-background">
+        <section id="about">
             <h2>About</h2>
-            <img src="images/vacation-rental-pool.png" alt="Vacation rental pool">
-            <img src="images/vacation-rental-inside-stone.png" alt="Vacation rental inside stone">
-            <p>
-                Fusce porta odio nunc, eget pretium massa rutrum sit amet. Etiam
-                fringilla aliquam dapibus. Maecenas quis nisi sed turpis aliquam
-                porttitor eget ut quam. Sed vel scelerisque ex.
-            </p>
+            <img src="images/pexels-wendywei-5306739.jpg" alt="Vacation Rental Pool">
+            <img src="images/roberto-nickson-gRHEt2kF3NU-unsplash.jpg" alt="Forest Retreat">
+            <p>Details about the vacation rental.</p>
         </section>
 
         <!-- Ideas Section -->
         <section id="ideas">
             <h2>Ideas</h2>
-            <h3>Forest retreats</h3>
-            <img src="images/sergei-a--heLWtuAN3c-unsplash.jpg" alt="Forest retreat">
-            
-            <h3>Beaches</h3>
-            <img src="images/pexels-pixabay-53610.jpg" alt="Beach house">
-            
-            <h3>Rustic cabins</h3>
-            <img src="images/pexels-taylor-marx-194183145-12578806.jpg" alt="Rustic cabin">
-            
-            <h3>Pet-friendly</h3>
-            <img src="images/roberto-nickson-gRHEt2kF3NU-unsplash.jpg" alt="Pet-friendly">
-        </section>
-
-        <!-- Host Section -->
-        <section id="host" class="alternate-background">
-            <h2>Want to Become a Thinkfulbnb Host?</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                molestie in est id efficitur. Sed hendrerit ut turpis quis dapibus.
-            </p>
-            <ul>
-                <li>Mauris in pellentesque ligula.</li>
-                <li>Sed accumsan elit lacus, id ultrices libero rutrum vitae.</li>
-                <li>Nunc vitae ex eget neque pellentesque porttitor.</li>
-            </ul>
-            <img src="images/become-a-host.png" alt="Become a host">
+            <img src="images/ethan-sykes-pgNyFfcNN9w-unsplash.jpg" alt="Rustic Cabin">
+            <img src="images/sergei-a--heLWtuAN3c-unsplash.jpg" alt="Beach House">
+            <img src="images/alex-baber-tTKgcVWPdLM-unsplash.jpg" alt="Mountain Retreat">
+            <img src="images/humphrey-muleba-dyj7RTs85Fs-unsplash.jpg" alt="Lake View">
         </section>
     </main>
 
     <footer>
-        <p>© Thinkful</p>
+        <p>© Thinkfulbnb</p>
     </footer>
-
-    <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const menu = document.getElementById("menu");
-        menuToggle.addEventListener("click", () => {
-            const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-            menu.classList.toggle("show");
-            menuToggle.setAttribute("aria-expanded", !isExpanded);
-        });
-    </script>
 </body>
 </html>
